@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+    <title>Oura Ring</title>
+    
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: Arial, sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. -->
+    <!--[if !mso]><!-->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!--<![endif]-->
+    
+    <style>
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            background: transparent;
+        }
+        
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+        
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+        
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        *[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+        
+        .im {
+            color: inherit !important;
+        }
+        
+        img.g-img + div {
+            display: none !important;
+        }
+        
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u ~ div .email-container {
+                min-width: 320px !important;
+            }
+        }
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u ~ div .email-container {
+                min-width: 375px !important;
+            }
+        }
+        @media only screen and (min-device-width: 414px) {
+            u ~ div .email-container {
+                min-width: 414px !important;
+            }
+        }
+
+    </style>
+    
+    <style>
+        .primary {
+            background: #ffffff;
+        }
+        .bg_dark {
+            background: #111520;
+        }
+        .bg_dark_card {
+            background: #191f30;
+        }
+        .email-section {
+            padding: 2.5em;
+        }
+        .btn {
+            padding: 12px 30px;
+            display: inline-block;
+            border-radius: 30px;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn.btn-dark {
+            background: #1c1c1c;
+            color: #ffffff;
+        }
+        .btn.btn-white {
+            background: #ffffff;
+            color: #111520;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #ffffff;
+            margin-top: 0;
+            font-weight: 400;
+        }
+        
+        p {
+            font-family: 'Inter', Arial, sans-serif;
+        }
+        
+        .heading-section h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+        .heading-section .subheading {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8c96a8;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .heading-section p {
+            color: #a4b0c5;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+        @media screen and (max-width: 600px) {
+            table {
+                table-layout: auto !important;
+            }
+            .email-section {
+                padding: 1.5em;
+            }
+            .responsive-grid,
+            .responsive-grid > tbody,
+            .responsive-grid > tbody > tr,
+            .responsive-grid > tr {
+                display: block !important;
+                width: 100% !important;
+            }
+            .stack-column {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+                box-sizing: border-box !important;
+                margin-bottom: 20px !important;
+            }
+            .stack-spacer {
+                display: none !important;
+            }
+            .stack-column-center {
+                text-align: center !important;
+            }
+        }
+    </style>
+</head>
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: transparent;">
+    <center style="width: 100%; background-color: transparent;">
+        <!--[if mso | IE]>
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: transparent;">
+        <tr>
+        <td>
+        <![endif]-->
+
+        <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+            <!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600">
+            <tr>
+            <td>
+            <![endif]-->
+
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+                
+                <!-- HERO SECTION -->
+                <tr>
+                    <td valign="top" style="background: linear-gradient(to bottom, #ebf0f5, #95b1c9); padding: 50px 20px 40px 20px; text-align: center;">
+                        <img src="Oura_LOGO.png" alt="Oura" width="110" style="display: block; margin: 0 auto 30px auto; border: 0;">
+                        
+                        <span style="font-family: 'Inter', Arial, sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #4e6074; display: block; margin-bottom: 12px; font-weight: 600;">INTRODUCING GENERATION 4</span>
+                        
+                        <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: 52px; color: #1c1c1c; margin: 0 0 15px 0; line-height: 1.05; font-weight: 400; letter-spacing: -1px;">Sleeker. Smarter.<br>Made for you.</h1>
+                        
+                        <p style="font-family: 'Inter', Arial, sans-serif; font-size: 15px; color: #3c4b5c; margin: 0 auto 0 auto; max-width: 420px; line-height: 1.5; position: relative; z-index: 2;">The most personal smart ring ever built —<br>now tracking over 20 biometrics, 24/7.</p>
+                        
+                        <!-- Hero Image -->
+                        <div style="margin-top: -320px; margin-bottom: -30px; text-align: center; position: relative; z-index: 1;">
+                            <img src="Banner_bgremoved.png" alt="Oura Rings" width="480" style="width: 100%; max-width: 480px; display: inline-block; border: 0;">
+                        </div>
+                        
+                        <a href="#" class="btn btn-dark" style="margin-bottom: 10px; position: relative; z-index: 2;">Shop Oura Ring 4</a>
+                    </td>
+                </tr>
+                
+                <!-- INTRO TEXT -->
+                <tr>
+                    <td class="bg_dark" style="padding: 50px 30px; text-align: center; border-bottom: 1px solid #1f273b;">
+                        <p style="font-family: 'Inter', Arial, sans-serif; font-size: 17px; color: #ffffff; line-height: 1.6; margin: 0;">
+                            Your finger knows more about you than your wrist. With continuous monitoring of your heart rate, sleep, stress, and more—Oura gives you a full picture of your health. All from a ring that fits seamlessly into your life.
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- COMPARISON SECTION -->
+                <tr>
+                    <td class="bg_dark" style="padding: 60px 20px 40px 20px; text-align: center;">
+                        <div class="heading-section">
+                            <span class="subheading">Why Oura wins</span>
+                            <h2>Smartwatches wish they tracked<br>this accurately.</h2>
+                            <p style="margin-bottom: 40px;">Meet the smarter way to understand your body.</p>
+                        </div>
+
+                        <!-- Table Wrapper -->
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #111520; border: 1px solid #1f273b; border-radius: 8px; overflow: hidden; max-width: 500px; margin: 0 auto;">
+                            <!-- Header Row -->
+                            <tr>
+                                <td width="33%" style="padding: 20px 10px; border-right: 1px solid #1f273b; border-bottom: 1px solid #1f273b;">&nbsp;</td>
+                                <td width="34%" style="padding: 20px 10px; background-color: #191f30; border-right: 1px solid #1f273b; border-bottom: 1px solid #1f273b; text-align: center;">
+                                    <img src="Table_ring.png" alt="Oura Ring 4" width="44" height="44" style="display: block; margin: 0 auto 10px auto; object-fit: contain;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 12px; font-weight: 600; color: #ffffff;">OURA RING 4</div>
+                                </td>
+                                <td width="33%" style="padding: 20px 10px; border-bottom: 1px solid #1f273b; text-align: center;">
+                                    <img src="Table_watch.png" alt="Typical Smartwatch" width="44" height="44" style="display: block; margin: 0 auto 10px auto; object-fit: contain;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 12px; font-weight: 600; color: #ffffff;">TYPICAL SMARTWATCH</div>
+                                </td>
+                            </tr>
+                            
+                            <!-- Row 1: Sleep Tracking -->
+                            <tr>
+                                <td style="padding: 15px 10px; border-right: 1px solid #1f273b; border-bottom: 1px solid #1f273b;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #a4b0c5; display: flex; align-items: flex-start;">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTMuNSA5LjVBNiA2IDAgMDE2LjUgMi41YS41LjUgMCAwMC0uNi43QTUgNSAwIDEwMTMuMyAxMC4xYS41LjUgMCAwMC4yLS42eiIgZmlsbD0iI2E0YjBjNSIvPjwvc3ZnPg==" width="16" style="margin-right: 8px; margin-top: 2px;"> 
+                                        <div>Sleep tracking<br>that's truly accurate</div>
+                                    </div>
+                                </td>
+                                <td style="padding: 15px 10px; background-color: #191f30; border-right: 1px solid #1f273b; border-bottom: 1px solid #1f273b; text-align: center;">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iNyIgZmlsbD0iIzFhM2EyYSIvPjxwb2x5bGluZSBwb2ludHM9IjQuNSw4LjIgNywxMC43IDExLjUsNS41IiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+" width="16" style="display: block; margin: 0 auto 5px auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #ffffff;">Advanced sleep staging,<br>readiness & recovery</div>
+                                </td>
+                                <td style="padding: 15px 10px; border-bottom: 1px solid #1f273b; text-align: center;">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iNyIgZmlsbD0iIzNhMWExYSIvPjxsaW5lIHgxPSI1LjUiIHkxPSI1LjUiIHgyPSIxMC41IiB5Mj0iMTAuNSIgc3Ryb2tlPSIjZjg3MTcxIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIxMC41IiB5MT0iNS41IiB4Mj0iNS41IiB5Mj0iMTAuNSIgc3Ryb2tlPSIjZjg3MTcxIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==" width="16" style="display: block; margin: 0 auto 5px auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #a4b0c5;">Basic sleep tracking<br>often misses key details</div>
+                                </td>
+                            </tr>
+
+                            <!-- Row 2: Battery life -->
+                            <tr>
+                                <td style="padding: 15px 10px; border-right: 1px solid #1f273b; border-bottom: 1px solid #1f273b;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #a4b0c5; display: flex; align-items: flex-start;">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSIxIiB5PSI0LjUiIHdpZHRoPSIxMiIgaGVpZ2h0PSI3IiByeD0iMS41IiBzdHJva2U9IiNhNGIwYzUiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTEzIDYuNXYzIiBzdHJva2U9IiNhNGIwYzUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSIyLjUiIHk9IjYiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHJ4PSIwLjUiIGZpbGw9IiNhNGIwYzUiLz48L3N2Zz4=" width="16" style="margin-right: 8px; margin-top: 2px;"> 
+                                        <div>Battery life<br>that goes the distance</div>
+                                    </div>
+                                </td>
+                                <td style="padding: 15px 10px; background-color: #191f30; border-right: 1px solid #1f273b; border-bottom: 1px solid #1f273b; text-align: center;">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iNyIgZmlsbD0iIzFhM2EyYSIvPjxwb2x5bGluZSBwb2ludHM9IjQuNSw4LjIgNywxMC43IDExLjUsNS41IiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+" width="16" style="display: block; margin: 0 auto 5px auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #ffffff;">Up to 8 days<br>on a single charge</div>
+                                </td>
+                                <td style="padding: 15px 10px; border-bottom: 1px solid #1f273b; text-align: center;">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iNyIgZmlsbD0iIzNhMWExYSIvPjxsaW5lIHgxPSI1LjUiIHkxPSI1LjUiIHgyPSIxMC41IiB5Mj0iMTAuNSIgc3Ryb2tlPSIjZjg3MTcxIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIxMC41IiB5MT0iNS41IiB4Mj0iNS41IiB5Mj0iMTAuNSIgc3Ryb2tlPSIjZjg3MTcxIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==" width="16" style="display: block; margin: 0 auto 5px auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #a4b0c5;">Daily charging<br>is the norm</div>
+                                </td>
+                            </tr>
+
+                            <!-- Row 3: Health insights -->
+                            <tr>
+                                <td style="padding: 15px 10px; border-right: 1px solid #1f273b; border-bottom: 1px solid #1f273b;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #a4b0c5; display: flex; align-items: flex-start;">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOCAxMy41UzIgOS41IDIgNS41QTMuNSAzLjUgMCAwMTggMy41IDMuNSAzLjUgMCAwMTE0IDUuNWMwIDQtNiA4LTYgOHoiIHN0cm9rZT0iI2E0YjBjNSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiLz48L3N2Zz4=" width="16" style="margin-right: 8px; margin-top: 2px;"> 
+                                        <div>Health insights<br>you can trust</div>
+                                    </div>
+                                </td>
+                                <td style="padding: 15px 10px; background-color: #191f30; border-right: 1px solid #1f273b; border-bottom: 1px solid #1f273b; text-align: center;">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iNyIgZmlsbD0iIzFhM2EyYSIvPjxwb2x5bGluZSBwb2ludHM9IjQuNSw4LjIgNywxMC43IDExLjUsNS41IiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+" width="16" style="display: block; margin: 0 auto 5px auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #ffffff;">20+ biometrics tracked<br>24/7 for deeper insights</div>
+                                </td>
+                                <td style="padding: 15px 10px; border-bottom: 1px solid #1f273b; text-align: center;">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iNyIgZmlsbD0iIzNhMWExYSIvPjxsaW5lIHgxPSI1LjUiIHkxPSI1LjUiIHgyPSIxMC41IiB5Mj0iMTAuNSIgc3Ryb2tlPSIjZjg3MTcxIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIxMC41IiB5MT0iNS41IiB4Mj0iNS41IiB5Mj0iMTAuNSIgc3Ryb2tlPSIjZjg3MTcxIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==" width="16" style="display: block; margin: 0 auto 5px auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #a4b0c5;">Limited metrics<br>miss the bigger picture</div>
+                                </td>
+                            </tr>
+
+                            <!-- Row 4: Designed to last -->
+                            <tr>
+                                <td style="padding: 15px 10px; border-right: 1px solid #1f273b;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #a4b0c5; display: flex; align-items: flex-start;">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOCAyTDMgNHY0YzAgMyAyLjMgNS42IDUgNi41IDIuNy0uOSA1LTMuNSA1LTYuNVY0TDggMnoiIHN0cm9rZT0iI2E0YjBjNSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiLz48cG9seWxpbmUgcG9pbnRzPSI1LjUsOCA3LjIsOS43IDEwLjUsNi41IiBzdHJva2U9IiNhNGIwYzUiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+PC9zdmc+" width="16" style="margin-right: 8px; margin-top: 2px;"> 
+                                        <div>Designed to last<br>and built to last</div>
+                                    </div>
+                                </td>
+                                <td style="padding: 15px 10px; background-color: #191f30; border-right: 1px solid #1f273b; text-align: center;">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iNyIgZmlsbD0iIzFhM2EyYSIvPjxwb2x5bGluZSBwb2ludHM9IjQuNSw4LjIgNywxMC43IDExLjUsNS41IiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+" width="16" style="display: block; margin: 0 auto 5px auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #ffffff;">Titanium build,<br>water resistant</div>
+                                </td>
+                                <td style="padding: 15px 10px; text-align: center;">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iNyIgZmlsbD0iIzNhMWExYSIvPjxsaW5lIHgxPSI1LjUiIHkxPSI1LjUiIHgyPSIxMC41IiB5Mj0iMTAuNSIgc3Ryb2tlPSIjZjg3MTcxIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIxMC41IiB5MT0iNS41IiB4Mj0iNS41IiB5Mj0iMTAuNSIgc3Ryb2tlPSIjZjg3MTcxIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==" width="16" style="display: block; margin: 0 auto 5px auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #a4b0c5;">Bulkier design,<br>less durable over time</div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="margin-top: 40px;">
+                            <a href="#" class="btn btn-white">Shop Oura Ring 4</a>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- FEATURES GRID -->
+                <tr>
+                    <td class="bg_dark" style="padding: 60px 20px 40px 20px; text-align: center;">
+                        <div class="heading-section">
+                            <span class="subheading">WHAT IT DOES FOR YOU</span>
+                            <h2>Your health data,<br>finally making sense.</h2>
+                            <p style="margin-bottom: 40px;">Wear it to bed. Wake up knowing excately what your body needs today.</p>
+                        </div>
+
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive-grid">
+                            <!-- Grid Row 1 -->
+                            <tr>
+                                <td valign="top" width="48%" class="stack-column stack-column-center">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="bg_dark_card" style="border-radius: 8px;">
+                                        <tr>
+                                            <td style="padding: 25px 20px; text-align: left;">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjEgMTIuNzlBOSA5IDAgMTExMS4yMSAzYTcgNyAwIDAwOS43OSA5Ljc5eiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+" width="24" style="margin-bottom: 15px; display: block;">
+                                                <h3 style="font-size: 16px; margin-bottom: 10px; font-family: 'Inter', Arial, sans-serif; font-weight: 600;">Sleep intelligence</h3>
+                                                <p style="font-size: 13px; color: #a4b0c5; margin: 0; line-height: 1.5;">Deep, REM, and light sleep tracked with clinical-grade accuracy. Know what actually recovered you.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="4%" class="stack-spacer"></td>
+                                <td valign="top" width="48%" class="stack-column stack-column-center">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="bg_dark_card" style="border-radius: 8px;">
+                                        <tr>
+                                            <td style="padding: 25px 20px; text-align: left;">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cG9seWxpbmUgcG9pbnRzPSIyLDEyIDYsMTIgOCw2IDEwLDE4IDEyLDEwIDE0LDE0IDE2LDEyIDIyLDEyIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS44IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiLz48L3N2Zz4=" width="24" style="margin-bottom: 15px; display: block;">
+                                                <h3 style="font-size: 16px; margin-bottom: 10px; font-family: 'Inter', Arial, sans-serif; font-weight: 600;">Readiness score</h3>
+                                                <p style="font-size: 13px; color: #a4b0c5; margin: 0; line-height: 1.5;">A daily score that tells you when to push hard — and when to rest. No more guessing.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr><td colspan="3" height="15" class="stack-spacer"></td></tr>
+                            <!-- Grid Row 2 -->
+                            <tr>
+                                <td valign="top" width="48%" class="stack-column stack-column-center">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="bg_dark_card" style="border-radius: 8px;">
+                                        <tr>
+                                            <td style="padding: 25px 20px; text-align: left;">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIzIiBmaWxsPSIjZmZmZmZmIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iNiIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC41Ii8+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iOSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuMjUiLz48L3N2Zz4=" width="24" style="margin-bottom: 15px; display: block;">
+                                                <h3 style="font-size: 16px; margin-bottom: 10px; font-family: 'Inter', Arial, sans-serif; font-weight: 600;">Smart sensing tech</h3>
+                                                <p style="font-size: 13px; color: #a4b0c5; margin: 0; line-height: 1.5;">Adapts to your unique finger shape and optimizes battery life automatically. Always on, never draining.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="4%" class="stack-spacer"></td>
+                                <td valign="top" width="48%" class="stack-column stack-column-center">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="bg_dark_card" style="border-radius: 8px;">
+                                        <tr>
+                                            <td style="padding: 25px 20px; text-align: left;">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI5IiBjeT0iNyIgcj0iMyIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuOCIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0zIDIwYzAtMy4zIDIuNy02IDYtNnM2IDIuNyA2IDYiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPjxjaXJjbGUgY3g9IjE3IiBjeT0iOCIgcj0iMiIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0yMSAyMGMwLTIuMi0xLjgtNC00LTQiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==" width="24" style="margin-bottom: 15px; display: block;">
+                                                <h3 style="font-size: 16px; margin-bottom: 10px; font-family: 'Inter', Arial, sans-serif; font-weight: 600;">1,000,000+members</h3>
+                                                <p style="font-size: 13px; color: #a4b0c5; margin: 0; line-height: 1.5;">The official wearable of Team USA. Trusted by athletes, executives, and everyday high performers.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="margin-top: 40px;">
+                            <a href="#" class="btn btn-white">Discover Oura Ring 4</a>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- FINISHES SECTION -->
+                <tr>
+                    <td class="bg_dark" style="padding: 60px 20px 40px 20px; text-align: center;">
+                        <div class="heading-section">
+                            <span class="subheading">SIX FINISHES. ONE RING.</span>
+                            <h2>A Finish for<br>every lifestyle.</h2>
+                            <p style="margin-bottom: 40px;">From boardroom to bedroom - it looks like jewelry , works like a lab.</p>
+                        </div>
+
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive-grid">
+                            <!-- Finish Row 1 -->
+                            <tr>
+                                <td valign="top" width="48%" class="stack-column stack-column-center">
+                                    <img src="gold.png" alt="Gold" width="100%" style="display: block; border-radius: 8px; max-width: 250px; margin: 0 auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 14px; color: #ffffff; margin-top: 15px; font-weight: 600;">Gold</div>
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 12px; color: #a4b0c5; margin-top: 5px;">Rich &amp; refined</div>
+                                </td>
+                                <td width="4%" class="stack-spacer"></td>
+                                <td valign="top" width="48%" class="stack-column stack-column-center">
+                                    <img src="silver.png" alt="Silver" width="100%" style="display: block; border-radius: 8px; max-width: 250px; margin: 0 auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 14px; color: #ffffff; margin-top: 15px; font-weight: 600;">Silver</div>
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 12px; color: #a4b0c5; margin-top: 5px;">Clean &amp; Classic</div>
+                                </td>
+                            </tr>
+                            <tr><td colspan="3" height="30" class="stack-spacer"></td></tr>
+                            <!-- Finish Row 2 -->
+                            <tr>
+                                <td valign="top" width="48%" class="stack-column stack-column-center">
+                                    <img src="RoseGold.png" alt="Rose Gold" width="100%" style="display: block; border-radius: 8px; max-width: 250px; margin: 0 auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 14px; color: #ffffff; margin-top: 15px; font-weight: 600;">Rose Gold</div>
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 12px; color: #a4b0c5; margin-top: 5px;">Warm &amp; elegant</div>
+                                </td>
+                                <td width="4%" class="stack-spacer"></td>
+                                <td valign="top" width="48%" class="stack-column stack-column-center">
+                                    <img src="BrushedSliver.png" alt="Brushed Silver" width="100%" style="display: block; border-radius: 8px; max-width: 250px; margin: 0 auto;">
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 14px; color: #ffffff; margin-top: 15px; font-weight: 600;">Brushed Silver</div>
+                                    <div style="font-family: 'Inter', Arial, sans-serif; font-size: 12px; color: #a4b0c5; margin-top: 5px;">Understated Luxury</div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="margin-top: 40px;">
+                            <a href="#" class="btn btn-white">Find your finish</a>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- OFFER SECTION -->
+                <tr>
+                    <td class="bg_dark" style="padding: 60px 20px 40px 20px; text-align: center;">
+                        <div class="heading-section">
+                            <span class="subheading">Limited time</span>
+                            <h2>Your first month<br>of membership - free.</h2>
+                            <p style="margin-bottom: 10px;">Then just $5.99/month or $69.99/year .</p>
+                            <p style="font-size: 11px; color: #8c96a8; margin-bottom: 40px;">Automatically applied at checkout. FSA/ HSA eligible.No code needed.</p>
+                        </div>
+                        
+                        <a href="#" class="btn btn-white">Order Oura Ring 4 now</a>
+                    </td>
+                </tr>
+
+                <!-- FULL WIDTH IMAGE -->
+                <tr>
+                    <td class="bg_dark" style="padding: 0; text-align: center;">
+                        <img src="footer.png" alt="Hand wearing Oura Ring" width="100%" style="display: block; margin: 0; border: 0; max-width: 600px;">
+                    </td>
+                </tr>
+
+                <!-- FOOTER -->
+                <tr>
+                    <td class="bg_dark" style="padding: 50px 30px 50px 30px; text-align: center; border-top: 1px solid #1f273b;">
+
+                        <!-- Stars + Rating -->
+                        <div style="font-family: 'Inter', Arial, sans-serif; margin-bottom: 8px;">
+                            <span style="font-size: 18px; color: #ffffff; letter-spacing: 4px;">★★★★★</span>
+                        </div>
+                        <div style="font-family: 'Inter', Arial, sans-serif; font-size: 13px; color: #a4b0c5; font-weight: 400; margin-bottom: 30px; letter-spacing: 0.3px;">
+                            4.8 stars &nbsp;·&nbsp; 1,000,000+ members worldwide
+                        </div>
+
+                        <!-- Trust Badges Row -->
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse; border: 1px solid #1f273b; border-radius: 8px; overflow: hidden;">
+                            <tr>
+                                <td width="25%" valign="middle" style="padding: 14px 8px; font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 500; color: #8c96a8; text-align: center; text-transform: uppercase; letter-spacing: 0.8px; line-height: 1.5;">
+                                    Clinically<br>Validated
+                                </td>
+                                <td width="25%" valign="middle" style="padding: 14px 8px; font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 500; color: #8c96a8; text-align: center; text-transform: uppercase; letter-spacing: 0.8px; line-height: 1.5; border-left: 1px solid #1f273b;">
+                                    Team USA<br>Official
+                                </td>
+                                <td width="25%" valign="middle" style="padding: 14px 8px; font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 500; color: #8c96a8; text-align: center; text-transform: uppercase; letter-spacing: 0.8px; line-height: 1.5; border-left: 1px solid #1f273b;">
+                                    Non-<br>Allergenic
+                                </td>
+                                <td width="25%" valign="middle" style="padding: 14px 8px; font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 500; color: #8c96a8; text-align: center; text-transform: uppercase; letter-spacing: 0.8px; line-height: 1.5; border-left: 1px solid #1f273b;">
+                                    iOS &amp;<br>Android
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Spacer -->
+                        <div style="height: 36px; font-size: 0; line-height: 0;">&nbsp;</div>
+
+                        <!-- Logo Pill -->
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td align="center">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td align="center" style="background-color: #ffffff; border-radius: 40px; padding: 14px 30px; line-height: 0;">
+                                                <img src="Oura_LOGO.png" alt="Oura" width="68" style="display: block; border: 0; line-height: 0;">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Spacer -->
+                        <div style="height: 30px; font-size: 0; line-height: 0;">&nbsp;</div>
+
+                        <!-- Disclaimer -->
+                        <p style="font-family: 'Inter', Arial, sans-serif; font-size: 10px; color: #667285; line-height: 1.7; margin: 0 auto 24px auto; max-width: 460px;">
+                            Oura Ring is not a medical device. Health insights are intended for informational and wellness purposes only and are not a substitute for professional medical advice, diagnosis, or treatment.
+                        </p>
+
+                        <!-- Nav Links -->
+                        <p style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #667285; margin: 0; letter-spacing: 0.3px;">
+                            <a href="#" style="color: #667285; text-decoration: underline;">Unsubscribe</a>
+                            &nbsp;&middot;&nbsp;
+                            <a href="#" style="color: #667285; text-decoration: underline;">Privacy Policy</a>
+                            &nbsp;&middot;&nbsp;
+                            <a href="#" style="color: #8c96a8; text-decoration: none; font-weight: 500;">ouraring.com</a>
+                        </p>
+
+                    </td>
+                </tr>
+            </table>
+            <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+
+        <!--[if mso | IE]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+    </center>
+</body>
+</html>

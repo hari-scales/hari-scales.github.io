@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Sequence Samples — Hari Scales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #131313;
+    --onyx: #3C3C3C;
+    --dim-gray: #646464;
+    --silver: #B5B5B5;
+    --white-smoke: #F3F3F3;
+    --white: #ffffff;
+    --border: #2a2a2a;
+    --muted: #a0a0a0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--night);
+    color: var(--white-smoke);
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; height: 80px;
+    background: rgba(19, 19, 19, 0.95); backdrop-filter: blur(8px);
+    z-index: 900; border-bottom: 1px solid var(--onyx);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .nav-container {
+    width: 100%; max-width: 1280px; padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { font-family: 'Syne', sans-serif; font-size: 26px; color: var(--white); text-decoration: none; letter-spacing: 1px; }
+  
+  .back-btn {
+    display: inline-flex; align-items: center; color: var(--white-smoke); text-decoration: none;
+    font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: opacity 0.3s;
+  }
+  .back-btn:hover { opacity: 0.7; }
+  .back-btn span { margin-right: 8px; font-size: 18px; line-height: 1; }
+
+  /* HEADER */
+  .page-header { text-align: center; margin: 60px 0 40px; padding: 0 20px; }
+  .page-header h1 { font-family: 'Syne', sans-serif; font-size: 48px; font-weight: 300; margin-bottom: 12px; }
+  .page-meta { color: var(--muted); font-size: 15px; letter-spacing: 0.5px; }
+
+  /* PORTFOLIO CONTAINER */
+  .portfolio-container {
+    max-width: 1100px; width: 100%; margin: 0 auto; padding: 0 20px 80px; flex: 1;
+    display: flex; flex-direction: column;
+  }
+
+  /* TABS */
+  .ep-tabs { display: flex; justify-content: center; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  .ep-tab { 
+    background: none; border: none; color: var(--muted); font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px; text-transform: uppercase; letter-spacing: 1px; padding: 16px 24px;
+    cursor: pointer; position: relative; transition: color 0.3s;
+  }
+  .ep-tab:hover { color: var(--white); }
+  .ep-tab.active { color: var(--white); }
+  .ep-tab.active::after {
+    content: ''; position: absolute; bottom: -1px; left: 0; width: 100%;
+    height: 2px; background: var(--white);
+  }
+
+  /* CONTENT AREA */
+  .ep-content-area { height: 80vh; min-height: 500px; max-height: 900px; display: flex; flex-direction: column; }
+  .ep-pane { display: none; flex: 1; animation: fadeIn 0.4s ease forwards; flex-direction: column; }
+  .ep-pane.active { display: flex; }
+
+  /* BROWSER MOCKUP */
+  .ep-browser-mockup {
+    background: #111; border: 1px solid var(--border); border-radius: 8px;
+    display: flex; flex-direction: column; flex: 1; overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    max-width: 800px; margin: 0 auto; width: 100%;
+  }
+  .ep-browser-header {
+    height: 36px; background: #1a1a1a; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; padding: 0 16px;
+  }
+  .ep-browser-dots { display: flex; gap: 8px; }
+  .ep-browser-dots span { width: 12px; height: 12px; border-radius: 50%; background: #333; }
+  .ep-browser-dots span:nth-child(1) { background: #ff5f56; }
+  .ep-browser-dots span:nth-child(2) { background: #ffbd2e; }
+  .ep-browser-dots span:nth-child(3) { background: #27c93f; }
+  .ep-iframe-container { flex: 1; background: #111520; display: flex; flex-direction: column; }
+  .ep-iframe-container iframe { width: 100%; flex: 1; border: none; display: block; background: transparent; }
+
+  /* COMING SOON */
+  .ep-coming-soon {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    flex: 1; border: 1px dashed var(--border); border-radius: 8px; text-align: center; color: var(--muted);
+    min-height: 400px;
+  }
+  .ep-coming-soon h4 { font-family: 'Syne', sans-serif; font-size: 28px; margin-bottom: 12px; color: var(--white); font-weight: 300; }
+
+  /* CTA */
+  .ep-cta-container { text-align: center; margin-top: 60px; }
+  .ig-btn {
+    display: inline-block; padding: 18px 40px; background: var(--white-smoke); color: var(--night);
+    text-transform: uppercase; font-size: 13px; font-weight: 600; letter-spacing: 2px;
+    text-decoration: none; border-radius: 2px; transition: transform 0.3s, background 0.3s;
+  }
+  .ig-btn:hover { background: var(--white); transform: translateY(-2px); }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media(max-width: 768px) {
+    .page-header h1 { font-size: 36px; }
+    .ep-tab { padding: 12px 16px; font-size: 13px; }
+    .nav-container { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">HS</a>
+    <a href="index.html" class="back-btn"><span>←</span> Back to Portfolio</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Email Sequence Portfolio</h1>
+  <p class="page-meta">High-Converting Campaigns & Automated Sequences</p>
+</div>
+
+<div class="portfolio-container">
+  <div class="ep-tabs">
+    <button class="ep-tab active" onclick="switchEpTab('oura', this)">Oura Ring Campaign</button>
+    <button class="ep-tab" onclick="switchEpTab('chubbies', this)">Chubbies Campaign</button>
+    <button class="ep-tab" onclick="switchEpTab('coming2', this)">Ninja Kitchen Campaign</button>
+  </div>
+
+  <div class="ep-content-area">
+    <!-- Oura Sample -->
+    <div id="ep-oura" class="ep-pane active">
+      <div class="ep-browser-mockup">
+        <div class="ep-browser-header">
+          <div class="ep-browser-dots"><span></span><span></span><span></span></div>
+        </div>
+        <div class="ep-iframe-container">
+          <iframe src="GRAVITY_OURA/index.html" title="Oura Ring Email Sample"></iframe>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Chubbies Sample -->
+    <div id="ep-chubbies" class="ep-pane">
+      <div class="ep-browser-mockup">
+        <div class="ep-browser-header">
+          <div class="ep-browser-dots"><span></span><span></span><span></span></div>
+        </div>
+        <div class="ep-iframe-container">
+          <iframe src="Chubbies/index.html" title="Chubbies Email Sample"></iframe>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Ninja Kitchen Sample -->
+    <div id="ep-coming2" class="ep-pane">
+      <div class="ep-browser-mockup">
+        <div class="ep-browser-header">
+          <div class="ep-browser-dots"><span></span><span></span><span></span></div>
+        </div>
+        <div class="ep-iframe-container">
+          <iframe src="NINJA KITCEN/index.html" title="Ninja Kitchen Email Sample"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="ep-cta-container">
+    <a href="index.html#contact" class="ig-btn">Book Discovery Call</a>
+  </div>
+</div>
+
+<script>
+function switchEpTab(id, btn) {
+  const tabs = document.querySelectorAll('.ep-tab');
+  tabs.forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  
+  const panes = document.querySelectorAll('.ep-pane');
+  panes.forEach(p => p.classList.remove('active'));
+  document.getElementById('ep-' + id).classList.add('active');
+}
+</script>
+</body>
+</html>
