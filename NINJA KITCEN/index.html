@@ -21,16 +21,21 @@
   <![endif]-->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap');
-    html, body {
+    body {
       margin: 0;
       padding: 0;
       word-spacing: normal;
       background-color: #f6f6f6;
       font-family: 'Inter', Helvetica, Arial, sans-serif;
-      overflow-x: hidden;
-      width: 100%;
-      max-width: 100vw;
-      position: relative;
+    }
+    @media only screen and (max-width: 600px) {
+      .main-container { width: 100% !important; max-width: 100% !important; }
+      td[style*="width: 50%"] { display: block !important; width: 100% !important; box-sizing: border-box !important; padding: 20px !important; text-align: center !important; border-right: none !important; }
+      td[style*="width: 33.33%"] { display: block !important; width: 100% !important; box-sizing: border-box !important; padding: 15px !important; border-right: none !important; border-bottom: 1px solid #eaeaea; }
+      div[style*="white-space: nowrap"] { white-space: normal !important; }
+      img[src="product.jpg"] { width: 100% !important; margin: 0 auto !important; max-width: 300px !important; }
+      table[style*="max-width: 560px"] td { display: block !important; width: 100% !important; padding: 8px 0 !important; }
+      table[style*="max-width: 560px"] td:nth-child(even) { display: none !important; }
     }
     table, td, div, h1, p {
       font-family: 'Inter', Helvetica, Arial, sans-serif;
